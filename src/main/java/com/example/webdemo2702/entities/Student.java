@@ -2,8 +2,7 @@ package com.example.webdemo2702.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
@@ -12,6 +11,9 @@ import lombok.Setter;
 @NamedQueries({
         @NamedQuery(name = "Student.findAll", query = "select s from Student s")
 })
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
